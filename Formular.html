@@ -32,13 +32,13 @@
       >
         <div>
           <label>Anrede *</label><br />
-          <input type="radio" id="Herr" name="Anrede" value="Herr" required />
+          <input type="radio" id="radio" name="Anrede" value="Herr" required />
           <label for="Herr">Herr</label>
-          <input type="radio" id="Frau" name="Anrede" value="Frau" required />
+          <input type="radio" id="radio" name="Anrede" value="Frau" required />
           <label for="Frau">Frau</label>
           <input
             type="radio"
-            id="Divers"
+            id="radio"
             name="Anrede"
             value="Divers"
             required
@@ -47,7 +47,7 @@
         </div>
         <div>
           <label for="Beruf">Beruf *</label><br />
-          <select id="Beruf" class="Beruf">
+          <select id="dropdown" class="Beruf">
             <option value="HatJob">Hat einen Job</option>
             <option value="Arbeitslos">Arbeitslos</option>
           </select>
@@ -56,7 +56,7 @@
           <label for="Vorname">Vorname *</label><br />
           <input
             type="text"
-            id="Vorname"
+            id="textarea"
             name="Vorname"
             minlength="1"
             maxlength="100"
@@ -68,7 +68,7 @@
           <label for="Nachname">Nachname *</label><br />
           <input
             type="text"
-            id="Nachname"
+            id="textarea"
             name="Nachname"
             minlength="1"
             maxlength="100"
@@ -83,7 +83,7 @@
           <label for="Strasse">Strasse *</label><br />
           <input
             type="text"
-            id="Strasse"
+            id="textarea"
             name="Strasse"
             minlength="1"
             maxlength="100"
@@ -94,11 +94,12 @@
           <label for="PLZ">PLZ */ORT</label><br />
           <input type="text" id="PLZ" name="PLZ" maxlength="4" required />
           <input
-            type="email"
-            id="Ort"
+            type="text"
+            id="textarea"
             name="Ort"
             minlength="1"
             maxlength="100"
+            placeholder="Ist zurzeit nicht verfügbar"
             disabled
           />
         </div>
@@ -106,7 +107,7 @@
           <label for="Email">Email *</label><br />
           <input
             type="email"
-            id="Email"
+            id="textarea"
             name="Email"
             minlength="1"
             maxlength="100"
@@ -119,7 +120,7 @@
           <label for="Passwort">Passwort *</label><br />
           <input
             type="password"
-            id="Passwort"
+            id="textarea"
             name="Passwort"
             minlength="1"
             maxlength="100"
@@ -131,7 +132,7 @@
           <label for="Telefon">Telefon</label><br />
           <input
             type="tel"
-            id="Telefon"
+            id="textarea"
             name="Telefon"
             minlength="1"
             maxlength="100"
@@ -141,7 +142,7 @@
         <div>
           <label for="Nachricht">Nachricht *</label><br />
           <textarea
-            id="Nachricht"
+            id="textarea"
             name="Nachricht"
             rows="4"
             cols="50"
