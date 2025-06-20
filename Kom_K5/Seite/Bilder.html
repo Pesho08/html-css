@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilder</title>
+    <link rel="stylesheet" href="../../Kom_K6/Design.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../../Kom_K3/3E-F/index.html">Homepage</a></li>
+          <li><a href="../../Kom_K3/3E-F/uebermich.html">Über mich</a></li>
+          <li><a href="../../Kom_K4/4F/Formular.html">Formular</a></li>
+          <li><strong>Bilder</strong></li>
+          <li><a href="../../Kom_K7/Grids.html">Grids</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="titleGross font-mono text-4xl">Bilder</h1>
+
+      <h2 class="titleKlein font-serif text-2xl">Bild mit URL</h2>
+      <img
+        src="https://img.br.de/8c573791-038d-4438-8245-7c7c248ec478.jpeg"
+        title="Astronaut"
+        alt="Neil Armstrong auf dem Mond"
+        class="Bilder"
+      />
+
+      <h2 class="titleKlein font-serif text-2xl">Bild mit lokalem Pfad</h2>
+      <img
+        src="../Bilder/bg_planetary-society_apollo11-armstrong_uhd3840x2160.jpg"
+        alt="Apollo 11 Hintergrundbild"
+        class="Bilder"
+      />
+
+      <h2 class="titleKlein font-serif text-2xl">Audio</h2>
+      <audio controls>
+        <source
+          src="https://www.w3schools.com/html/horse.mp3"
+          type="audio/mpeg"
+        />
+        Dein Browser unterstützt kein Audio-Element.
+      </audio>
+
+      <h2 class="titleKlein font-serif text-2xl">Video</h2>
+      <video controls>
+        <source
+          src="../Bilder/fading-stormtrooper.960x540.mp4"
+          type="video/mp4"
+        />
+        Dein Browser unterstützt kein Video-Element.
+      </video>
+
+      <h2 class="titleKlein font-serif text-2xl">iframe</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/UpqigplV_3I?si=euAc-37_3_mn0Vkq"
+        title="YouTube Video Player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </main>
+  </body>
+</html>

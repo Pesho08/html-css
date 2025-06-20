@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="main-bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formular</title>
+    <link rel="stylesheet" href="../../Kom_K6/Design.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../../Kom_K3/3E-F/index.html">Homepage</a></li>
+          <li><a href="../../Kom_K3/3E-F/uebermich.html">Über mich</a></li>
+          <li><strong>Formular</strong></li>
+          <li><a href="../../Kom_K5/Seite/Bilder.html">Bilder</a></li>
+          <li><a href="../../Kom_K7/Grids.html">Grids</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Formular</h1>
+      <p>
+        Hier ist ein Formular, das du ausfüllen kannst. Es ist wichtig, dass du
+        alle Pflichtfelder (*) ausfüllst.
+      </p>
+
+      <form
+        action="https://gibm.becknet.ch/formular/formular.php"
+        method="post"
+      >
+        <div>
+          <label>Anrede *</label><br />
+          <input type="radio" id="Herr" name="Anrede" value="Herr" required />
+          <label for="Herr">Herr</label>
+          <input type="radio" id="Frau" name="Anrede" value="Frau" required />
+          <label for="Frau">Frau</label>
+          <input
+            type="radio"
+            id="Divers"
+            name="Anrede"
+            value="Divers"
+            required
+          />
+          <label for="Divers">Divers</label>
+        </div>
+        <div>
+          <label for="Beruf">Beruf *</label><br />
+          <select id="Beruf" class="Beruf">
+            <option value="HatJob">Hat einen Job</option>
+            <option value="Arbeitslos">Arbeitslos</option>
+          </select>
+        </div>
+        <div>
+          <label for="Vorname">Vorname *</label><br />
+          <input
+            type="text"
+            id="Vorname"
+            name="Vorname"
+            minlength="1"
+            maxlength="100"
+            autofocus
+            required
+          />
+          <br />
+          <br />
+          <label for="Nachname">Nachname *</label><br />
+          <input
+            type="text"
+            id="Nachname"
+            name="Nachname"
+            minlength="1"
+            maxlength="100"
+            required
+          />
+        </div>
+        <div>
+          <label for="Geburtsdatum">Geburtsdatum *</label><br />
+          <input type="date" id="Geburtsdatum" name="Geburtsdatum" required />
+        </div>
+        <div>
+          <label for="Strasse">Strasse *</label><br />
+          <input
+            type="text"
+            id="Strasse"
+            name="Strasse"
+            minlength="1"
+            maxlength="100"
+            required
+          />
+          <br />
+          <br />
+          <label for="PLZ">PLZ */ORT</label><br />
+          <input type="text" id="PLZ" name="PLZ" maxlength="4" required />
+          <input
+            type="email"
+            id="Ort"
+            name="Ort"
+            minlength="1"
+            maxlength="100"
+            disabled
+          />
+        </div>
+        <div>
+          <label for="Email">Email *</label><br />
+          <input
+            type="email"
+            id="Email"
+            name="Email"
+            minlength="1"
+            maxlength="100"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            placeholder="max.mustermann@example.de"
+            required
+          />
+          <br />
+          <br />
+          <label for="Passwort">Passwort *</label><br />
+          <input
+            type="password"
+            id="Passwort"
+            name="Passwort"
+            minlength="1"
+            maxlength="100"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="Telefon">Telefon</label><br />
+          <input
+            type="tel"
+            id="Telefon"
+            name="Telefon"
+            minlength="1"
+            maxlength="100"
+          />
+        </div>
+
+        <div>
+          <label for="Nachricht">Nachricht *</label><br />
+          <textarea
+            id="Nachricht"
+            name="Nachricht"
+            rows="4"
+            cols="50"
+            minlength="1"
+            maxlength="1000"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <input type="submit" id="Senden" name="Senden" value="Senden" />
+          <input type="reset" id="Löschen" name="Löschen" value="Löschen" />
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
