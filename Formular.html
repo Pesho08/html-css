@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="main-bg">
+<html lang="de" class="main-bg">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,6 +19,7 @@
         </ul>
       </nav>
     </header>
+
     <main>
       <h1>Formular</h1>
       <p>
@@ -26,88 +27,61 @@
         alle Pflichtfelder (*) ausfüllst.
       </p>
 
-      <form
-        action="https://gibm.becknet.ch/formular/formular.php"
-        method="post"
-      >
+      <form action="https://gibm.becknet.ch/formular/formular.php" method="post">
+        <!-- Anrede -->
         <div>
           <label>Anrede *</label><br />
-          <input type="radio" id="radio" name="Anrede" value="Herr" required />
+          <input type="radio" id="Herr" name="Anrede" value="Herr" required />
           <label for="Herr">Herr</label>
-          <input type="radio" id="radio" name="Anrede" value="Frau" required />
+          <input type="radio" id="Frau" name="Anrede" value="Frau" required />
           <label for="Frau">Frau</label>
-          <input
-            type="radio"
-            id="radio"
-            name="Anrede"
-            value="Divers"
-            required
-          />
+          <input type="radio" id="Divers" name="Anrede" value="Divers" required />
           <label for="Divers">Divers</label>
         </div>
+
+        <!-- Beruf -->
         <div>
           <label for="Beruf">Beruf *</label><br />
-          <select id="dropdown" class="Beruf">
+          <select id="Beruf" name="Beruf" class="Beruf" required>
+            <option value="">Bitte wählen</option>
             <option value="HatJob">Hat einen Job</option>
             <option value="Arbeitslos">Arbeitslos</option>
           </select>
         </div>
+
+        <!-- Vor- und Nachname -->
         <div>
           <label for="Vorname">Vorname *</label><br />
-          <input
-            type="text"
-            id="textarea"
-            name="Vorname"
-            minlength="1"
-            maxlength="100"
-            autofocus
-            required
-          />
-          <br />
-          <br />
+          <input type="text" id="Vorname" name="Vorname" minlength="1" maxlength="100" required autofocus />
+          <br /><br />
           <label for="Nachname">Nachname *</label><br />
-          <input
-            type="text"
-            id="textarea"
-            name="Nachname"
-            minlength="1"
-            maxlength="100"
-            required
-          />
+          <input type="text" id="Nachname" name="Nachname" minlength="1" maxlength="100" required />
         </div>
+
+        <!-- Geburtsdatum -->
         <div>
           <label for="Geburtsdatum">Geburtsdatum *</label><br />
           <input type="date" id="Geburtsdatum" name="Geburtsdatum" required />
         </div>
+
+        <!-- Adresse -->
         <div>
           <label for="Strasse">Strasse *</label><br />
-          <input
-            type="text"
-            id="textarea"
-            name="Strasse"
-            minlength="1"
-            maxlength="100"
-            required
-          />
-          <br />
-          <br />
-          <label for="PLZ">PLZ */ORT</label><br />
+          <input type="text" id="Strasse" name="Strasse" minlength="1" maxlength="100" required />
+          <br /><br />
+          <label for="PLZ">PLZ *</label><br />
           <input type="text" id="PLZ" name="PLZ" maxlength="4" required />
-          <input
-            type="text"
-            id="textarea"
-            name="Ort"
-            minlength="1"
-            maxlength="100"
-            placeholder="Ist zurzeit nicht verfügbar"
-            disabled
-          />
+          <br />
+          <label for="Ort">Ort</label><br />
+          <input type="text" id="Ort" name="Ort" placeholder="Ist zurzeit nicht verfügbar" disabled />
         </div>
+
+        <!-- Kontakt -->
         <div>
           <label for="Email">Email *</label><br />
           <input
             type="email"
-            id="textarea"
+            id="Email"
             name="Email"
             minlength="1"
             maxlength="100"
@@ -115,34 +89,32 @@
             placeholder="max.mustermann@example.de"
             required
           />
-          <br />
-          <br />
+          <br /><br />
           <label for="Passwort">Passwort *</label><br />
           <input
             type="password"
-            id="textarea"
+            id="Passwort"
             name="Passwort"
-            minlength="1"
+            minlength="8"
             maxlength="100"
+            autocomplete="off"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Mindestens 8 Zeichen, 1 Zahl, 1 Großbuchstabe"
             required
           />
         </div>
 
+        <!-- Optionales Feld -->
         <div>
           <label for="Telefon">Telefon</label><br />
-          <input
-            type="tel"
-            id="textarea"
-            name="Telefon"
-            minlength="1"
-            maxlength="100"
-          />
+          <input type="tel" id="Telefon" name="Telefon" minlength="1" maxlength="100" />
         </div>
 
+        <!-- Nachricht -->
         <div>
           <label for="Nachricht">Nachricht *</label><br />
           <textarea
-            id="textarea"
+            id="Nachricht"
             name="Nachricht"
             rows="4"
             cols="50"
@@ -151,9 +123,11 @@
             required
           ></textarea>
         </div>
+
+        <!-- Buttons -->
         <div>
           <input type="submit" id="Senden" name="Senden" value="Senden" />
-          <input type="reset" id="Löschen" name="Löschen" value="Löschen" />
+          <input type="reset" id="Loeschen" name="Loeschen" value="Löschen" />
         </div>
       </form>
     </main>
